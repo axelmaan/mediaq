@@ -3,11 +3,11 @@ body {
     font-family: "Montserrat", sans-serif;
     height: 100%;
 }
-header {
-    grid-area: header;
+nav {
+    grid-area: menu;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: left;
+    flex-direction: row;
     background-color: rgb(212, 212, 212);
     height: 100px;
 }
@@ -25,14 +25,15 @@ header h2 {
 } 
 
 .nav-main {
-    padding: 30px;
+    padding: 30px 10px;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #000000;
     color: white;
-    height: 110px;
+    height: 5vh;
 }
 .nav-main ul {
     display: flex;
@@ -53,32 +54,18 @@ header h2 {
     color: darkgrey;
 }
 
-.numeros {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-
-}
-.numeros p {
-    border: 1px solid black;
-    padding: 10px 10px;
-}
-.numeros .fa-solid {
-    border: 1px solid black;
-    padding: 10px 10px;
-}
 nav img {
     width: 150px;
     height: auto;
     
 }
 .grid {
+  margin-top: 0;
     display: grid;
     grid-template-columns: auto;
+
 }
-.producto {
+.producto1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,22 +74,154 @@ nav img {
     box-shadow: 5px 5px 40px #3939392d;
     
 }
-.producto img {
-    width: 70%;    
+.producto2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 40px #3939392d;
+  
 }
-.producto button {
-    background-color: #000000;
-    color: white;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;    
+.producto3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 40px #3939392d;
+  
 }
-.producto button:hover {
-    background-color: rgb(38, 38, 38);
+.producto4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 40px #3939392d;
+  
 }
+.producto5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 40px #3939392d;
+  
+}
+.producto6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 40px #3939392d;
+  
+}
+.producto1 img {
+    width: 70%;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+
+      
+     
+}.producto2 img {
+  width: 70%;    
+}.producto3 img {
+  width: 70%;    
+}.producto4 img {
+  width: 70%;    
+}.producto5 img {
+  width: 70%;    
+}.producto6 img {
+  width: 70%; 
+   
+}  
+.producto1 img:last-child {
+  display: none;
+  opacity 0;
+  
+}
+.producto1:hover img:last-child {
+  display: block;
+  opacity: 1;
+
+}
+.producto1:hover img:first-child {
+  display: none;
+  
+}
+
+.producto2 img:last-child {
+  display: none;
+
+}
+.producto2:hover img:last-child {
+  display: block;
+  
+}
+.producto2:hover img:first-child {
+  display: none;
+  
+}
+.producto3 img:last-child {
+  display: none;
+
+}
+.producto3:hover img:last-child {
+  display: block;
+  
+}
+.producto3:hover img:first-child {
+  display: none;
+  
+}
+
+.producto4 img:last-child {
+  display: none;
+
+}
+.producto4:hover img:last-child {
+  display: block;
+  
+}
+.producto4:hover img:first-child {
+  display: none;
+  
+}
+
+.producto5 img:last-child {
+  display: none;
+
+}
+.producto5:hover img:last-child {
+  display: block;
+  
+}
+.producto5:hover img:first-child {
+  display: none;
+  
+}
+
+.producto6 img:last-child {
+  display: none;
+
+}
+.producto6:hover img:last-child {
+  display: block;
+  
+}
+.producto6:hover img:first-child {
+  display: none;
+  
+}
+
+
+
 main {
     grid-area: seccion-principal;
-    padding: 10px;
+
 }
 
 footer {
@@ -128,7 +247,6 @@ div {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "menu"
-    "header"
     "seccion-principal"
     "pie-de-pagina"
     ;
@@ -168,44 +286,82 @@ div {
   input[type="radio"]:checked ~ label {
     color: orange;
   }
-  
+  .side-menu {
+    display: none;
+  }
+  .side-menu.open {
+    width: 250px;
+  }
+
+  /* Estilos para el botón de cierre dentro del menú */
+  .side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .logo img {
+    display: none;
+}
+  main {
+    background-color: rgb(255, 255, 255);
+  }
+  .logomenu img {
+    display: none;
+  }
 @media (min-width:576px) {
     div {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns:auto auto auto;
         grid-template-areas: 
         "menu"
-        "header"
         "seccion-principal"
         "pie-de-pagina"
         ;
 
     }
-    .grid {
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    .nav-main {
+      display: none;
     }
-    .numeros {
-        display: none;
+    .side-menu {
+      grid-area: side;
+      display:grid ;
+      width: 100%;
+      background-color: #111;
+      padding: 20px;
+      color: white;
     }
-    .burger { display: none;
+    .side-menu a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      display: flex;
+      color: #818181;
+      display: block;
+      transition: color 0.6s;
+    }
 
-    }
-    .nav-main ul {
+    .side-menu ul {
         display: flex;
         flex-direction: row;
+        text-align: center;
+        align-items: center;
         gap: 10px;
-        justify-content:space-between;
+        justify-content:space-evenly;
     }
-    .nav-main li {
+    .side-menu li {
         list-style: none;
     }
-    .nav-main ul a {
+    .side-menu li img {
+      width: 30%;
+      margin-top: -60px;
+  }
+    .side-menu ul a {
         color: white;
         text-decoration-line: none;
     
     } 
-    .nav-main ul a:hover {
+    .side-menu ul a:hover {
         color: darkgrey;
     }
 
@@ -245,5 +401,35 @@ div {
       input[type="radio"]:checked ~ label {
         color: orange;
       }
+      .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
       
+    }
+    .logo img {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+}
+
+        
+    main {
+      background-color: black;
+    }
+    .logomenu img {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+
 }
